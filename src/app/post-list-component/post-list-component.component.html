@@ -1,0 +1,11 @@
+<div class="col-sm-8 col-sm-offset-2">
+    <h2>Mes posts</h2>
+    <app-post-list-item-component *ngFor="let post of posts; let i=index"
+        [postIndex]="i"
+        [postTitle]="post.title"
+        [postContent]="post.content"
+        [postLikes]="post.likes"
+        [currentDate]="post.currentDate">
+    </app-post-list-item-component>
+    
+</div>

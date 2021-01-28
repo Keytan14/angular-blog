@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true,
+            'list-group-item-success': postLikes > 0, 
+            'list-group-item-danger': postLikes < 0 }">
+    
+    <h2 >{{ postTitle }} <span class="badge badge-light" >{{ currentDate | date:'mediumDate' }}</span> </h2>
+    <p>{{ postContent }}</p>
+    <p> &#10084; {{ postLikes }}</p>
+    <button class="btn btn-success btn-sm" (click)="onUpLikes()">Love it</button>
+    <button class="btn btn-danger btn-sm" (click)="onDownLikes()">Don't love it</button>
+    <button class="btn btn-primary btn-sm pull-right" (click)="removePost()">Supprimer</button>
+</li>
